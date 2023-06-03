@@ -73,13 +73,15 @@ podSecurityContext: {}
 # Priority class name
 # priorityClassName : high-priority
 
-securityContext: {}
-  # capabilities:
-  #   drop:
-  #   - ALL
-  # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
-  # runAsUser: 1000
+securityContext:
+  allowPrivilegeEscalation: false
+  capabilities:
+    drop:
+    - ALL
+  runAsNonRoot: true
+  runAsUser: 999
+  seccompProfile:
+    type: RuntimeDefault
 
 livenessProbe:
   # Enable liveness probe
@@ -218,13 +220,15 @@ blockdiag:
     # Image pull policy
     pullPolicy: IfNotPresent
 
-  securityContext: {}
-    # capabilities:
-    #   drop:
-    #   - ALL
-    # readOnlyRootFilesystem: true
-    # runAsNonRoot: true
-    # runAsUser: 1000
+  securityContext:
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop:
+      - ALL
+    runAsNonRoot: true
+    runAsUser: 999
+    seccompProfile:
+      type: RuntimeDefault
 
   resources: {}
     # We usually recommend not to specify default resources and to leave this as a conscious
@@ -272,13 +276,15 @@ bpmn:
     # Image pull policy
     pullPolicy: IfNotPresent
 
-  securityContext: {}
-    # capabilities:
-    #   drop:
-    #   - ALL
-    # readOnlyRootFilesystem: true
-    # runAsNonRoot: true
-    # runAsUser: 1000
+  securityContext:
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop:
+      - ALL
+    runAsNonRoot: true
+    runAsUser: 999
+    seccompProfile:
+      type: RuntimeDefault
 
   resources: {}
     # We usually recommend not to specify default resources and to leave this as a conscious
@@ -326,13 +332,15 @@ diagramsnet:
     # Image pull policy
     pullPolicy: IfNotPresent
 
-  securityContext: {}
-    # capabilities:
-    #   drop:
-    #   - ALL
-    # readOnlyRootFilesystem: true
-    # runAsNonRoot: true
-    # runAsUser: 1000
+  securityContext: 
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop:
+      - ALL
+    runAsNonRoot: true
+    runAsUser: 999
+    seccompProfile:
+      type: RuntimeDefault
 
   resources: {}
     # We usually recommend not to specify default resources and to leave this as a conscious
@@ -380,13 +388,15 @@ excalidraw:
     # Image pull policy
     pullPolicy: IfNotPresent
 
-  securityContext: {}
-    # capabilities:
-    #   drop:
-    #   - ALL
-    # readOnlyRootFilesystem: true
-    # runAsNonRoot: true
-    # runAsUser: 1000
+  securityContext:
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop:
+      - ALL
+    runAsNonRoot: true
+    runAsUser: 999
+    seccompProfile:
+      type: RuntimeDefault
 
   resources: {}
     # We usually recommend not to specify default resources and to leave this as a conscious
@@ -434,13 +444,15 @@ mermaid:
     # Image pull policy
     pullPolicy: IfNotPresent
 
-  securityContext: {}
-    # capabilities:
-    #   drop:
-    #   - ALL
-    # readOnlyRootFilesystem: true
-    # runAsNonRoot: true
-    # runAsUser: 1000
+  securityContext:
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop:
+      - ALL
+    runAsNonRoot: true
+    runAsUser: 999
+    seccompProfile:
+      type: RuntimeDefault
 
   resources: {}
     # We usually recommend not to specify default resources and to leave this as a conscious
@@ -488,13 +500,15 @@ wireviz:
     # Image pull policy
     pullPolicy: IfNotPresent
 
-  securityContext: {}
-    # capabilities:
-    #   drop:
-    #   - ALL
-    # readOnlyRootFilesystem: true
-    # runAsNonRoot: true
-    # runAsUser: 1000
+  securityContext:
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop:
+      - ALL
+    runAsNonRoot: true
+    runAsUser: 999
+    seccompProfile:
+      type: RuntimeDefault  
 
   resources: {}
     # We usually recommend not to specify default resources and to leave this as a conscious
